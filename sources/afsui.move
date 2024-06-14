@@ -1,22 +1,22 @@
-module aresrpg::fud {
+module aresrpg::afsui {
     use sui::coin::{Self, TreasuryCap};
     use sui::url;
 
     public struct Registry has key{
         id: UID,
-        treasury_cap: TreasuryCap<FUD>
+        treasury_cap: TreasuryCap<AFSUI>
     }
 
-    public struct FUD has drop {}
+    public struct AFSUI has drop {}
 
-    fun init(witness: FUD, ctx: &mut TxContext) {
+    fun init(witness: AFSUI, ctx: &mut TxContext) {
         let (treasury_cap, coin_metadata) = coin::create_currency(
             witness,
             9,
-            b"FUD",
-            b"Test FUD",
-            b"FUD tokens minted for testing purposes.",
-            option::some(url::new_unsafe_from_bytes(b"https://raw.githubusercontent.com/Sceat/coin-faucet/master/assets/fud.jpg")),
+            b"AFSUI",
+            b"Test AFSUI",
+            b"AFSUI tokens minted for testing purposes.",
+            option::some(url::new_unsafe_from_bytes(b"https://raw.githubusercontent.com/Sceat/coin-faucet/master/assets/afsui.png")),
             ctx
         );
 

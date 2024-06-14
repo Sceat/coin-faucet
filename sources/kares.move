@@ -1,22 +1,22 @@
-module aresrpg::fud {
+module aresrpg::kares {
     use sui::coin::{Self, TreasuryCap};
     use sui::url;
 
     public struct Registry has key{
         id: UID,
-        treasury_cap: TreasuryCap<FUD>
+        treasury_cap: TreasuryCap<KARES>
     }
 
-    public struct FUD has drop {}
+    public struct KARES has drop {}
 
-    fun init(witness: FUD, ctx: &mut TxContext) {
+    fun init(witness: KARES, ctx: &mut TxContext) {
         let (treasury_cap, coin_metadata) = coin::create_currency(
             witness,
             9,
-            b"FUD",
-            b"Test FUD",
-            b"FUD tokens minted for testing purposes.",
-            option::some(url::new_unsafe_from_bytes(b"https://raw.githubusercontent.com/Sceat/coin-faucet/master/assets/fud.jpg")),
+            b"KARES",
+            b"Test KARES",
+            b"KARES tokens minted for testing purposes.",
+            option::some(url::new_unsafe_from_bytes(b"https://raw.githubusercontent.com/Sceat/coin-faucet/master/assets/kares.png")),
             ctx
         );
 
