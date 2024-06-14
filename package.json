@@ -1,0 +1,20 @@
+{
+  "name": "aresrpg-faucet",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "node -r dotenv/config ./scripts/publish.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "dotenv": "^16.4.5"
+  },
+  "dependencies": {
+    "@mysten/sui": "^1.1.2",
+    "bignumber.js": "^9.1.2"
+  }
+}

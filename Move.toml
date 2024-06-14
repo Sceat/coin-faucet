@@ -1,0 +1,16 @@
+[package]
+name = "aresrpg"
+version = "0.1.0"
+published-at = ""
+edition = "2024.beta"
+
+authors = ["Sceat (fetch@sceat.xyz)"]
+
+[dependencies.Sui]
+git = "https://github.com/MystenLabs/sui.git"
+subdir = "crates/sui-framework/packages/sui-framework"
+rev = "framework/testnet"
+override = true
+
+[addresses]
+aresrpg = "0x0"
